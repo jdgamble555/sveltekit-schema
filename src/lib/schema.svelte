@@ -16,7 +16,7 @@
 		return schema.length === 1 ? schema[0] : schema;
 	}
 
-	$: json = `${'<scri' + 'pt type="application/ld+json">'}${JSON.stringify(createSchema(schema))}${
+	const json = `${'<scri' + 'pt type="application/ld+json">'}${JSON.stringify(createSchema(schema))}${
 		'</scri' + 'pt>'
 	}`;
 </script>

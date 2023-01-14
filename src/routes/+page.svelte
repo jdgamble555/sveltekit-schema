@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 	import Schema from '$lib/schema.svelte';
 
-    const schema = {
+	const schema = {
 		'@type': 'BlogPosting',
 		headline: 'some thing',
 		name: 'yup',
@@ -39,5 +39,3 @@
 <button on:click={() => goto(`https://validator.schema.org/#url=${$page.url.origin}`)}>
 	Validate Schema
 </button>
-
-
