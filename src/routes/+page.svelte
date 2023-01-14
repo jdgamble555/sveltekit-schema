@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import Schema from '$lib/schema.svelte';
@@ -31,7 +32,9 @@
 	};
 </script>
 
-<Schema {schema} />
+{#if !browser}
+	<Schema {schema} />
+{/if}
 
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
